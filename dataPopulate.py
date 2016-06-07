@@ -5,7 +5,6 @@ import random
 db = MySQLdb.connect("127.0.0.1", "root", "0007", "TESTDB")
 cursor = db.cursor()
 
-
 def dataPopulate(table, c1, c2, c3):
     query = "INSERT INTO " + table + "(c1, c2, c3)" \
             "VALUES(%s, %s, %s)"
@@ -22,6 +21,7 @@ def dataPopulate(table, c1, c2, c3):
         print "We got a problem! "
         print sys.exc_info()[0]
 
+
 def getData(table):
     query = "select * from " + table
     rows = cursor.execute(query)
@@ -29,6 +29,7 @@ def getData(table):
 
     for row in data:
         print row
+
 
 for i in range(100000):
     c1, c2, c3 = random.randint(0,50), random.randint(51,100), random.randint(101,200)
