@@ -11,8 +11,6 @@ def dataPopulate(table, c1, c2, c3):
             "VALUES(%s, %s, %s)"
     args = (c1, c2, c3)
 
-    # sql = "insert into tableA values(%d, %d, %d)" % \
-    # (c1, c2, c3)
     try:
         rows = cursor.execute(query, args)
         db.commit()
