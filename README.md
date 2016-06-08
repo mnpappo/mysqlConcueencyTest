@@ -17,4 +17,6 @@
 Run the Test Script & wait for the result
 
 #Result
-Till now my PC gets hang :(
+If no limit on select my PC gets hang :(
+
+An image with exec duration & fetch time added
